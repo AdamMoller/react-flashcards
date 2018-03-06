@@ -1,4 +1,7 @@
 # React Flashcards
+[![Build Status](https://travis-ci.org/AdamMoller/react-flashcards.svg?branch=master)](https://travis-ci.org/AdamMoller/react-flashcards)
+[![codecov](https://codecov.io/gh/AdamMoller/react-flashcards/branch/master/graph/badge.svg)](https://codecov.io/gh/AdamMoller/react-flashcards)
+
 Simple flashcards app built with React. Created as a learning exercise.
 
 ## Credits
