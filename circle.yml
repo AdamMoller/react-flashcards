@@ -1,6 +1,6 @@
 machine:
-  node:
-    version: 8.9.4
+  environment:
+    CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
 
 dependencies:
   post:
