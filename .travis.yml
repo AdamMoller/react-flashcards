@@ -10,3 +10,4 @@ install:
   - npm install -g codecov
 script:
   - npm test -- --coverage && codecov
+  - npm run build
