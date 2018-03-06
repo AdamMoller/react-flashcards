@@ -1,6 +1,6 @@
 machine:
   environment:
-    CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
+    CC_TEST_REPORTER_ID: 83083ac6c418843a38fb6371b01a734ebf274777dd0595fa05b0880a3fdc01bb
 
 dependencies:
   post:
@@ -12,4 +12,4 @@ test:
     - ./cc-test-reporter before-build
 
   post:
-    - ./cc-test-reporter after-build --exit-code $EXIT_CODE
+    - ./cc-test-reporter after-build --debug --exit-code $EXIT_CODE
