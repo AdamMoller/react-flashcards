@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import withRoot from './withRoot';
 import Grid from 'material-ui/Grid';
+import Navigation from './components/Navigation.js';
+import Flashcard from './components/Flashcard.js';
+import Controls from './components/Controls.js';
 
 const styles = theme => ({
   app: {
