@@ -6,7 +6,7 @@ import Typography from 'material-ui/Typography';
 
 const styles = theme => ({
   flashcard:{
-
+    padding: theme.spacing.unit * 4,
   }
 });
 
@@ -17,7 +17,7 @@ class Flashcard extends Component {
     return (
       <React.Fragment>
         <Paper elevation={4} className={classes.flashcard} onClick={clickCard}>
-          <Typography variant="display4" align="center">{word}</Typography>
+          <Typography variant="display3" align="center">{word}</Typography>
         </Paper>
       </React.Fragment>
     );
