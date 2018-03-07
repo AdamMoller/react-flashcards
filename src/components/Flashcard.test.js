@@ -4,6 +4,6 @@ import Flashcard from './Flashcard';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Flashcard />, div);
+  ReactDOM.render(<Flashcard word="example" clickCard={jest.fn()}/>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
