@@ -9,6 +9,7 @@ import Controls from './components/Controls.js';
 
 const styles = theme => ({
   app: {
+    marginTop:'10px',
   },
   flashcard: {
   },
