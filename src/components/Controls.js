@@ -4,7 +4,9 @@ import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 
 const styles = theme => ({
-
+  button:{
+    margin:'20px',
+  }
 });
 
 class Controls extends Component {
