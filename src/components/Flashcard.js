@@ -13,10 +13,10 @@ const styles = theme => ({
 
 class Flashcard extends Component {
   render() {
-    const { classes, word } = this.props;
+    const { classes, word, clickCard } = this.props;
     return (
       <React.Fragment>
-        <Paper elevation={4} className={classes.flashcard}>
+        <Paper elevation={4} className={classes.flashcard} onClick={clickCard}>
           <Typography variant="display4" align="center">{word}</Typography>
         </Paper>
       </React.Fragment>
@@ -27,6 +27,7 @@ class Flashcard extends Component {
 Flashcard.propTypes = {
   classes: PropTypes.object.isRequired,
   word: PropTypes.string.isRequired,
+  clickCard: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(Flashcard);
