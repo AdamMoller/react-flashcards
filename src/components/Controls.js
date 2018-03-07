@@ -9,11 +9,11 @@ const styles = theme => ({
 
 class Controls extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, clickNext, clickBack } = this.props;
     return (
       <React.Fragment>
-        <Button color="secondary" variant="raised" className={classes.button}>Back</Button>
-        <Button color="secondary" variant="raised" className={classes.button}>Next</Button>
+        <Button color="secondary" variant="raised" onClick={clickBack} className={classes.button}>Back</Button>
+        <Button color="secondary" variant="raised" onClick={clickNext} className={classes.button}>Next</Button>
       </React.Fragment>
     );
   }
@@ -21,6 +21,8 @@ class Controls extends Component {
 
 Controls.propTypes = {
   classes: PropTypes.object.isRequired,
+  clickBack: PropTypes.func.isRequired,
+  clickNext: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(Controls);

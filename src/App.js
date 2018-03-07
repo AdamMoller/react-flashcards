@@ -15,17 +15,42 @@ const styles = theme => ({
 });
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    let words = ["school","always","around","because","been","before","best","both","buy","call","cold","does","don’t","fast","first","five","found","gave","goes","green","its","made","many","off","or","pull","read","right","sing","sit","sleep","tell","their","these","those","upon","us","use","very","wash","which","why","wish","work","would","write","your"]
+    this.state = {
+      cardIndex: 0,
+      words: words,
+    }
+    this.previousCard = this.previousCard.bind(this)
+    this.nextCard = this.nextCard.bind(this)
+  }
+  nextCard(e) {
+    let nextIndex = this.state.cardIndex + 1
+    if(nextIndex >= this.state.words.length){
+      nextIndex = 0;
+    }
+    this.setState({cardIndex: nextIndex});
+  }
+  previousCard(e) {
+    let nextIndex = this.state.cardIndex - 1
+    if(nextIndex < 0){
+      nextIndex = this.state.words.length - 1
+    }
+    this.setState({cardIndex: nextIndex});
+  }
   render() {
     const { classes } = this.props;
+    const { words,cardIndex } = this.state;
     return (
       <React.Fragment>
       <Navigation/>
         <Grid container direction="column" align="center" spacing={40} className={classes.app}>
           <Grid item xs={11} sm={9} md={7} lg={5} className={classes.flashcard}>
-            <Flashcard word="sample"/>
+            <Flashcard word={words[cardIndex]} clickCard={this.nextCard}/>
           </Grid>
           <Grid item xs={11} sm={9} md={7} lg={5} align="center" className={classes.controls}>
-            <Controls/>
+            <Controls clickBack={this.previousCard} clickNext={this.nextCard}/>
           </Grid>
         </Grid>
       </React.Fragment>
