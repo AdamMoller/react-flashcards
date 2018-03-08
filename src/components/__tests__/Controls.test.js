@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Controls from './Controls';
+import Controls from '../Controls';
 
 
 describe('<Controls />', () => {
