@@ -17,5 +17,14 @@ describe('<App />', () => {
       const app = mount(<App />);
       app.find("button").at(0).simulate('click')
       app.find("button").at(1).simulate('click')
+      app.find("button").at(2).simulate('click')
+      app.find("ListItem").at(0).simulate('click')
+      app.find("ListItem").at(1).simulate('click')
+      app.find("ListItem").at(2).simulate('click')
+      app.find("ListItem").at(3).simulate('click')
+      app.find("ListItem").at(4).simulate('click')
+      app.find("ListItem").at(5).simulate('click')
+      app.find("ListItem").at(6).simulate('click')
+      app.find("ListItem").at(7).simulate('click')
   });
 });
