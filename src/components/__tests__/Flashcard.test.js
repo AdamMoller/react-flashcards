@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Flashcard from './Flashcard';
+import Flashcard from '../Flashcard';
 
 describe('<Flashcard />', () => {
   let nextCard, content, component
